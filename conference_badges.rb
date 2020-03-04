@@ -23,7 +23,10 @@ end
 
 def printer(attendees)
   badge = batch_badge_creator(attendees)
-  assign_rooms(attendees)
+  rooms = assign_rooms(attendees)
   l = attendees.length
-
+  l.times do |i|
+    puts badge[i]
+    puts rooms[i]
+  end
 end
